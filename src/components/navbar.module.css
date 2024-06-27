@@ -1,0 +1,154 @@
+.navbar {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1000; /* Ensure Navbar stays on top */
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navLogo {
+  flex: 1;
+}
+
+.navMenu {
+  display: flex;
+  gap: 20px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.menuItemText {
+  font-family: Inter, sans-serif;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: #0d0c22; /* Color of the icon */
+}
+
+.navActions {
+  display: flex;
+  margin-left: 110px;
+  gap: 20px;
+}
+
+.searchInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.loginButton,
+.signupButton {
+  font-family: Inter, sans-serif;
+  border-radius: 9999999px;
+  border: 1px solid rgba(13, 12, 34, 1);
+  background-color: #0d0c22;
+  color: #fff;
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover,
+.signupButton:hover {
+  background-color: #1a1a41;
+}
+
+/* Hamburger Menu Styles */
+.hamburgerMenu {
+  display: none; /* Hide by default for larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  width: 25px;
+  height: 3px;
+  background-color: #0d0c22;
+  margin: 3px 0;
+  transition: transform 0.3s ease;
+}
+
+.open {
+  transform: rotate(45deg); /* Styles for open state */
+}
+
+@media (max-width: 1024px) {
+  .navMenu {
+    display: none; /* Hide regular menu on medium screens */
+  }
+
+  .navActions {
+    display: none; /* Hide actions on medium screens */
+  }
+
+  .hamburgerMenu {
+    display: flex; /* Show hamburger menu on medium screens */
+  }
+
+  .responsiveMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: calc(100% + 10px); /* Distance from Navbar */
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Ensure responsive menu stays on top */
+  }
+
+  .responsiveMenuItem {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .responsiveSearchInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .responsiveLoginButton,
+  .responsiveSignupButton {
+    padding: 12px 25px;
+    border-radius: 9999999px;
+    border: 1px solid rgba(13, 12, 34, 1);
+    background-color: #0d0c22;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .responsiveLoginButton:hover,
+  .responsiveSignupButton:hover {
+    background-color: #1a1a41;
+  }
+
+  .responsiveMenu .responsiveMenuItem {
+    margin-top: 10px; /* Adjust spacing between items */
+  }
+}

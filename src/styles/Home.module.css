@@ -1,0 +1,15 @@
+/* src/styles/Home.module.css */
+.container {
+    padding: 0 0.5rem;
+  }
+  
+  .main {
+    padding: 5rem 0;
+  }
+  
+  .title {
+    font-size: 4rem;
+    margin: 0;
+    text-align: center;
+  }
+  
